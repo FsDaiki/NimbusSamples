@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B70D9CD01741AA2B004039BB /* STAttributedLabelSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B70D9CCE1741AA2B004039BB /* STAttributedLabelSampleViewController.m */; };
+		B70D9CD11741AA2B004039BB /* STAttributedLabelSampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B70D9CCF1741AA2B004039BB /* STAttributedLabelSampleViewController.xib */; };
 		B7DFBDD91740621400BAEE9F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7DFBDD81740621400BAEE9F /* UIKit.framework */; };
 		B7DFBDDB1740621400BAEE9F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7DFBDDA1740621400BAEE9F /* Foundation.framework */; };
 		B7DFBDDD1740621400BAEE9F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7DFBDDC1740621400BAEE9F /* CoreGraphics.framework */; };
@@ -59,6 +61,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B70D9CCD1741AA2B004039BB /* STAttributedLabelSampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STAttributedLabelSampleViewController.h; sourceTree = "<group>"; };
+		B70D9CCE1741AA2B004039BB /* STAttributedLabelSampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STAttributedLabelSampleViewController.m; sourceTree = "<group>"; };
+		B70D9CCF1741AA2B004039BB /* STAttributedLabelSampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STAttributedLabelSampleViewController.xib; sourceTree = "<group>"; };
 		B7DFBDD51740621400BAEE9F /* NimbusSamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NimbusSamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7DFBDD81740621400BAEE9F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B7DFBDDA1740621400BAEE9F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -175,6 +180,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B70D9CCC1741A9EB004039BB /* AttributedLabel */ = {
+			isa = PBXGroup;
+			children = (
+				B70D9CCD1741AA2B004039BB /* STAttributedLabelSampleViewController.h */,
+				B70D9CCE1741AA2B004039BB /* STAttributedLabelSampleViewController.m */,
+				B70D9CCF1741AA2B004039BB /* STAttributedLabelSampleViewController.xib */,
+			);
+			name = AttributedLabel;
+			sourceTree = "<group>";
+		};
 		B7DFBDCC1740621400BAEE9F = {
 			isa = PBXGroup;
 			children = (
@@ -212,7 +227,8 @@
 				B7DFBDE71740621400BAEE9F /* STAppDelegate.h */,
 				B7DFBDE81740621400BAEE9F /* STAppDelegate.m */,
 				B7DFBE051740683100BAEE9F /* Menu */,
-				B7DFBE041740682100BAEE9F /* PagingScrollView */,
+				B7DFBE041740682100BAEE9F /* NIPagingScrollView */,
+				B70D9CCC1741A9EB004039BB /* AttributedLabel */,
 				B7DFBE6C17407B5B00BAEE9F /* Resources */,
 				B7DFBDDF1740621400BAEE9F /* Supporting Files */,
 			);
@@ -233,7 +249,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		B7DFBE041740682100BAEE9F /* PagingScrollView */ = {
+		B7DFBE041740682100BAEE9F /* NIPagingScrollView */ = {
 			isa = PBXGroup;
 			children = (
 				B7DFBE5E17406C7800BAEE9F /* STPagingScrollViewSampleViewController.h */,
@@ -244,7 +260,7 @@
 				B7DFBE69174074D400BAEE9F /* STPagingScrollViewLabelPage.h */,
 				B7DFBE6A174074D500BAEE9F /* STPagingScrollViewLabelPage.m */,
 			);
-			name = PagingScrollView;
+			name = NIPagingScrollView;
 			sourceTree = "<group>";
 		};
 		B7DFBE051740683100BAEE9F /* Menu */ = {
@@ -429,6 +445,7 @@
 				B7DFBE7117407B5C00BAEE9F /* castle02.jpg in Resources */,
 				B7DFBE7217407B5C00BAEE9F /* castle03.jpg in Resources */,
 				B7DFBE8217407FF100BAEE9F /* STPagingScrollViewSampleViewController.xib in Resources */,
+				B70D9CD11741AA2B004039BB /* STAttributedLabelSampleViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,6 +491,7 @@
 				B7DFBE6B174074D500BAEE9F /* STPagingScrollViewLabelPage.m in Sources */,
 				B7DFBE7917407D8800BAEE9F /* NIAttributedLabel.m in Sources */,
 				B7DFBE7A17407D8800BAEE9F /* NSMutableAttributedString+NimbusAttributedLabel.m in Sources */,
+				B70D9CD01741AA2B004039BB /* STAttributedLabelSampleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,6 +608,7 @@
 				B7DFBDFD1740621400BAEE9F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

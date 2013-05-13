@@ -10,6 +10,7 @@
 #import "STMenuSection.h"
 #import "STMenuRow.h"
 #import "STPagingScrollViewSampleViewController.h"
+#import "STAttributedLabelSampleViewController.h"
 
 @implementation STMenuViewController {
     __weak UITableView *_tableView;
@@ -26,15 +27,29 @@
 
         STMenuSection *menuSection;
         STMenuRow *menuRow;
-        
+        //
+        // PagingScrollView
+        //
         menuSection = [[STMenuSection alloc] init];
         menuSection.title = @"PagingScrollView";
         
         menuRow = [[STMenuRow alloc] init];
         menuRow.title = @"NIPagingScrollView";
         menuRow.viewControllerClass = [STPagingScrollViewSampleViewController class];
-        
         [menuSection.rows addObject:menuRow];
+        
+        [_sections addObject:menuSection];
+        //
+        // AttributedLabel
+        //
+        menuSection = [[STMenuSection alloc] init];
+        menuSection.title = @"AttributedLabel";
+
+        menuRow = [[STMenuRow alloc] init];
+        menuRow.title = @"NIAttributedLabel";
+        menuRow.viewControllerClass = [STAttributedLabelSampleViewController class];
+        [menuSection.rows addObject:menuRow];
+        
         [_sections addObject:menuSection];
     }
     return self;
