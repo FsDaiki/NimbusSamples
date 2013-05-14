@@ -2,8 +2,8 @@
 //  STAttributedLabelSample1ViewController.m
 //  NimbusSamples
 //
-//  Created by MIYAMOTO, Hideaki on 2013/05/14.
-//  Copyright (c) 2013年 Stack3. All rights reserved.
+//  Created by EIMEI on 2013/05/14.
+//  Copyright (c) 2013 stack3.net. All rights reserved.
 //
 
 #import "STAttributedLabelSample1ViewController.h"

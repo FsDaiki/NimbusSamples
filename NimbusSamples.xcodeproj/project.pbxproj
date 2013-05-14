@@ -413,7 +413,7 @@
 			attributes = {
 				CLASSPREFIX = ST;
 				LastUpgradeCheck = 0460;
-				ORGANIZATIONNAME = Stack3;
+				ORGANIZATIONNAME = stack3.net;
 			};
 			buildConfigurationList = B7DFBDD01740621400BAEE9F /* Build configuration list for PBXProject "NimbusSamples" */;
 			compatibilityVersion = "Xcode 3.2";
