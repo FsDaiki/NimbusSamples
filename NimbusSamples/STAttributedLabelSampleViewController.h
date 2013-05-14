@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NimbusAttributedLabel.h"
 
-@interface STAttributedLabelSampleViewController : UIViewController
+@interface STAttributedLabelSampleViewController : UIViewController<NIAttributedLabelDelegate>
 
 @end
