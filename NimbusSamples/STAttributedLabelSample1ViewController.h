@@ -1,5 +1,5 @@
 //
-//  STAttributedLabelSampleViewController.h
+//  STAttributedLabelSample1ViewController.h
 //  NimbusSamples
 //
 //  Created by MIYAMOTO, Hideaki on 2013/05/14.
@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "NimbusAttributedLabel.h"
 
-@interface STAttributedLabelSampleViewController : UIViewController<NIAttributedLabelDelegate>
+@interface STAttributedLabelSample1ViewController : UIViewController<NIAttributedLabelDelegate>
 
 @end

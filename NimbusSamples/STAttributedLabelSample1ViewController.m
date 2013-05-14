@@ -1,14 +1,14 @@
 //
-//  STAttributedLabelSampleViewController.m
+//  STAttributedLabelSample1ViewController.m
 //  NimbusSamples
 //
 //  Created by MIYAMOTO, Hideaki on 2013/05/14.
 //  Copyright (c) 2013年 Stack3. All rights reserved.
 //
 
-#import "STAttributedLabelSampleViewController.h"
+#import "STAttributedLabelSample1ViewController.h"
 
-@implementation STAttributedLabelSampleViewController {
+@implementation STAttributedLabelSample1ViewController {
     IBOutlet __weak NIAttributedLabel *_label1;
     IBOutlet __weak NIAttributedLabel *_label2;
     IBOutlet __weak NIAttributedLabel *_label3;
@@ -16,7 +16,7 @@
 
 - (id)init
 {
-    self = [super initWithNibName:@"STAttributedLabelSampleViewController" bundle:nil];
+    self = [super initWithNibName:@"STAttributedLabelSample1ViewController" bundle:nil];
     if (self) {
         self.title = @"NIAttributedLabel";
     }

@@ -95,6 +95,7 @@
 						<string key="NSFrame">{{20, 78}, {280, 21}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -413,7 +414,7 @@
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
-				<string key="-1.CustomClassName">STAttributedLabelSampleViewController</string>
+				<string key="-1.CustomClassName">STAttributedLabelSample1ViewController</string>
 				<string key="-1.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="-2.CustomClassName">UIResponder</string>
 				<string key="-2.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -484,11 +485,11 @@
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
-					<string key="className">STAttributedLabelSampleViewController</string>
+					<string key="className">STAttributedLabelSample1ViewController</string>
 					<string key="superclassName">UIViewController</string>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/STAttributedLabelSampleViewController.h</string>
+						<string key="minorKey">./Classes/STAttributedLabelSample1ViewController.h</string>
 					</object>
 				</object>
 			</array>
