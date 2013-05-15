@@ -11,6 +11,7 @@
 #import "STMenuRow.h"
 #import "STPagingScrollViewSampleViewController.h"
 #import "STAttributedLabelSample1ViewController.h"
+#import "STAttributedLabelSample2ViewController.h"
 
 @implementation STMenuViewController {
     __weak UITableView *_tableView;
@@ -48,6 +49,11 @@
         menuRow = [[STMenuRow alloc] init];
         menuRow.title = @"Link";
         menuRow.viewControllerClass = [STAttributedLabelSample1ViewController class];
+        [menuSection.rows addObject:menuRow];
+        
+        menuRow = [[STMenuRow alloc] init];
+        menuRow.title = @"Decoration";
+        menuRow.viewControllerClass = [STAttributedLabelSample2ViewController class];
         [menuSection.rows addObject:menuRow];
         
         [_sections addObject:menuSection];

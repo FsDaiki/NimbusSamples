@@ -58,6 +58,8 @@
 		B7DFBE7E17407DE200BAEE9F /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7DFBE7D17407DE100BAEE9F /* MobileCoreServices.framework */; };
 		B7DFBE8017407E5200BAEE9F /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7DFBE7F17407E5200BAEE9F /* CoreText.framework */; };
 		B7DFBE8217407FF100BAEE9F /* STPagingScrollViewSampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7DFBE8117407FF100BAEE9F /* STPagingScrollViewSampleViewController.xib */; };
+		B7EF72F31743101300FD69E3 /* STAttributedLabelSample2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7EF72F11743101300FD69E3 /* STAttributedLabelSample2ViewController.m */; };
+		B7EF72F41743101300FD69E3 /* STAttributedLabelSample2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7EF72F21743101300FD69E3 /* STAttributedLabelSample2ViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -161,6 +163,9 @@
 		B7DFBE7D17407DE100BAEE9F /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		B7DFBE7F17407E5200BAEE9F /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		B7DFBE8117407FF100BAEE9F /* STPagingScrollViewSampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STPagingScrollViewSampleViewController.xib; sourceTree = "<group>"; };
+		B7EF72F01743101300FD69E3 /* STAttributedLabelSample2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STAttributedLabelSample2ViewController.h; sourceTree = "<group>"; };
+		B7EF72F11743101300FD69E3 /* STAttributedLabelSample2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STAttributedLabelSample2ViewController.m; sourceTree = "<group>"; };
+		B7EF72F21743101300FD69E3 /* STAttributedLabelSample2ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STAttributedLabelSample2ViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +191,9 @@
 				B70D9CCD1741AA2B004039BB /* STAttributedLabelSample1ViewController.h */,
 				B70D9CCE1741AA2B004039BB /* STAttributedLabelSample1ViewController.m */,
 				B70D9CCF1741AA2B004039BB /* STAttributedLabelSample1ViewController.xib */,
+				B7EF72F01743101300FD69E3 /* STAttributedLabelSample2ViewController.h */,
+				B7EF72F11743101300FD69E3 /* STAttributedLabelSample2ViewController.m */,
+				B7EF72F21743101300FD69E3 /* STAttributedLabelSample2ViewController.xib */,
 			);
 			name = AttributedLabel;
 			sourceTree = "<group>";
@@ -446,6 +454,7 @@
 				B7DFBE7217407B5C00BAEE9F /* castle03.jpg in Resources */,
 				B7DFBE8217407FF100BAEE9F /* STPagingScrollViewSampleViewController.xib in Resources */,
 				B70D9CD11741AA2B004039BB /* STAttributedLabelSample1ViewController.xib in Resources */,
+				B7EF72F41743101300FD69E3 /* STAttributedLabelSample2ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,6 +501,7 @@
 				B7DFBE7917407D8800BAEE9F /* NIAttributedLabel.m in Sources */,
 				B7DFBE7A17407D8800BAEE9F /* NSMutableAttributedString+NimbusAttributedLabel.m in Sources */,
 				B70D9CD01741AA2B004039BB /* STAttributedLabelSample1ViewController.m in Sources */,
+				B7EF72F31743101300FD69E3 /* STAttributedLabelSample2ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
