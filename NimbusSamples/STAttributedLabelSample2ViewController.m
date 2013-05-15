@@ -7,8 +7,13 @@
 //
 
 #import "STAttributedLabelSample2ViewController.h"
+#import "NimbusAttributedLabel.h"
 
-@implementation STAttributedLabelSample2ViewController
+@implementation STAttributedLabelSample2ViewController {
+    IBOutlet __weak NIAttributedLabel *_label1;
+    IBOutlet __weak NIAttributedLabel *_label2;
+    IBOutlet __weak NIAttributedLabel *_label3;
+}
 
 - (id)init
 {
@@ -22,7 +27,24 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+
+    _label1.text = @"01234567890";
+    NSRange range = NSMakeRange(4, 3);
+    [_label1 setTextColor:[UIColor redColor] range:range];
+    [_label1 setFont:[UIFont boldSystemFontOfSize:18.0f] range:range];
+    [_label1 setUnderlineStyle:kCTUnderlineStyleSingle modifier:kCTUnderlinePatternSolid range:range];
+    
+    _label2.text = @"01234567890";
+    _label2.font = [UIFont systemFontOfSize:20.0];
+    _label2.strokeWidth = 4.0f;
+    _label2.strokeColor = [UIColor grayColor];
+    
+    _label3.text = @"01234567890";
+    _label3.font = [UIFont systemFontOfSize:20.0];
+    _label3.strokeWidth = -4.0f;
+    _label3.strokeColor = [UIColor grayColor];
+    _label3.textColor = [UIColor greenColor];
+    _label3.textKern = 4.0f;
 }
 
 @end
