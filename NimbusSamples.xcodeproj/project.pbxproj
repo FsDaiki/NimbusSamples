@@ -65,6 +65,7 @@
 		B7EF73551746F5BE00FD69E3 /* NIPhotoScrubberView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7EF73501746F5BE00FD69E3 /* NIPhotoScrubberView.m */; };
 		B7EF73561746F5BE00FD69E3 /* NIToolbarPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7EF73521746F5BE00FD69E3 /* NIToolbarPhotoViewController.m */; };
 		B7EF73581746F5D200FD69E3 /* NimbusPhotos.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B7EF73571746F5D200FD69E3 /* NimbusPhotos.bundle */; };
+		B7EF735C1746F6C500FD69E3 /* STPhotoAlbumScrollViewSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7EF735B1746F6C500FD69E3 /* STPhotoAlbumScrollViewSampleViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -185,6 +186,8 @@
 		B7EF73511746F5BE00FD69E3 /* NIToolbarPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NIToolbarPhotoViewController.h; path = Submodules/nimbus/src/photos/src/NIToolbarPhotoViewController.h; sourceTree = "<group>"; };
 		B7EF73521746F5BE00FD69E3 /* NIToolbarPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NIToolbarPhotoViewController.m; path = Submodules/nimbus/src/photos/src/NIToolbarPhotoViewController.m; sourceTree = "<group>"; };
 		B7EF73571746F5D200FD69E3 /* NimbusPhotos.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = NimbusPhotos.bundle; path = Submodules/nimbus/src/photos/resources/NimbusPhotos.bundle; sourceTree = "<group>"; };
+		B7EF735A1746F6C500FD69E3 /* STPhotoAlbumScrollViewSampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPhotoAlbumScrollViewSampleViewController.h; sourceTree = "<group>"; };
+		B7EF735B1746F6C500FD69E3 /* STPhotoAlbumScrollViewSampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPhotoAlbumScrollViewSampleViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,8 +257,9 @@
 				B7DFBDE71740621400BAEE9F /* STAppDelegate.h */,
 				B7DFBDE81740621400BAEE9F /* STAppDelegate.m */,
 				B7DFBE051740683100BAEE9F /* Menu */,
-				B7DFBE041740682100BAEE9F /* NIPagingScrollView */,
 				B70D9CCC1741A9EB004039BB /* AttributedLabel */,
+				B7DFBE041740682100BAEE9F /* PagingScrollView */,
+				B7EF73591746F66800FD69E3 /* Photos */,
 				B7DFBE6C17407B5B00BAEE9F /* Resources */,
 				B7DFBDDF1740621400BAEE9F /* Supporting Files */,
 			);
@@ -276,7 +280,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		B7DFBE041740682100BAEE9F /* NIPagingScrollView */ = {
+		B7DFBE041740682100BAEE9F /* PagingScrollView */ = {
 			isa = PBXGroup;
 			children = (
 				B7DFBE5E17406C7800BAEE9F /* STPagingScrollViewSampleViewController.h */,
@@ -287,7 +291,7 @@
 				B7DFBE69174074D400BAEE9F /* STPagingScrollViewLabelPage.h */,
 				B7DFBE6A174074D500BAEE9F /* STPagingScrollViewLabelPage.m */,
 			);
-			name = NIPagingScrollView;
+			name = PagingScrollView;
 			sourceTree = "<group>";
 		};
 		B7DFBE051740683100BAEE9F /* Menu */ = {
@@ -434,6 +438,15 @@
 			name = Photos;
 			sourceTree = "<group>";
 		};
+		B7EF73591746F66800FD69E3 /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				B7EF735A1746F6C500FD69E3 /* STPhotoAlbumScrollViewSampleViewController.h */,
+				B7EF735B1746F6C500FD69E3 /* STPhotoAlbumScrollViewSampleViewController.m */,
+			);
+			name = Photos;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -548,6 +561,7 @@
 				B7EF73541746F5BE00FD69E3 /* NIPhotoScrollView.m in Sources */,
 				B7EF73551746F5BE00FD69E3 /* NIPhotoScrubberView.m in Sources */,
 				B7EF73561746F5BE00FD69E3 /* NIToolbarPhotoViewController.m in Sources */,
+				B7EF735C1746F6C500FD69E3 /* STPhotoAlbumScrollViewSampleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

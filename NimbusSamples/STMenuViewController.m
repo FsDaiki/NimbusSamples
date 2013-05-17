@@ -12,6 +12,7 @@
 #import "STPagingScrollViewSampleViewController.h"
 #import "STAttributedLabelSample1ViewController.h"
 #import "STAttributedLabelSample2ViewController.h"
+#import "STPhotoAlbumScrollViewSampleViewController.h"
 
 @implementation STMenuViewController {
     __weak UITableView *_tableView;
@@ -29,23 +30,11 @@
         STMenuSection *menuSection;
         STMenuRow *menuRow;
         //
-        // PagingScrollView
-        //
-        menuSection = [[STMenuSection alloc] init];
-        menuSection.title = @"PagingScrollView";
-        
-        menuRow = [[STMenuRow alloc] init];
-        menuRow.title = @"NIPagingScrollView";
-        menuRow.viewControllerClass = [STPagingScrollViewSampleViewController class];
-        [menuSection.rows addObject:menuRow];
-        
-        [_sections addObject:menuSection];
-        //
         // AttributedLabel
         //
         menuSection = [[STMenuSection alloc] init];
-        menuSection.title = @"AttributedLabel";
-
+        menuSection.title = @"NIAttributedLabel";
+        
         menuRow = [[STMenuRow alloc] init];
         menuRow.title = @"Link";
         menuRow.viewControllerClass = [STAttributedLabelSample1ViewController class];
@@ -54,6 +43,30 @@
         menuRow = [[STMenuRow alloc] init];
         menuRow.title = @"Decoration";
         menuRow.viewControllerClass = [STAttributedLabelSample2ViewController class];
+        [menuSection.rows addObject:menuRow];
+        
+        [_sections addObject:menuSection];
+        //
+        // PagingScrollView
+        //
+        menuSection = [[STMenuSection alloc] init];
+        menuSection.title = @"NIPagingScrollView";
+        
+        menuRow = [[STMenuRow alloc] init];
+        menuRow.title = @"Text and Image Pages";
+        menuRow.viewControllerClass = [STPagingScrollViewSampleViewController class];
+        [menuSection.rows addObject:menuRow];
+        
+        [_sections addObject:menuSection];
+        //
+        // PhotoAlbumScrollView
+        //
+        menuSection = [[STMenuSection alloc] init];
+        menuSection.title = @"NIPhotoAlbumScrollView";
+        
+        menuRow = [[STMenuRow alloc] init];
+        menuRow.title = @"Photo Album";
+        menuRow.viewControllerClass = [STPhotoAlbumScrollViewSampleViewController class];
         [menuSection.rows addObject:menuRow];
         
         [_sections addObject:menuSection];
