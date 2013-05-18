@@ -5,10 +5,10 @@ To Build and Run.
 ---
 You need to do this before build.  
 
-`git submodule init
-git submodule update
-cd Submodules/nimbus
-git submodule init
+`git submodule init  
+git submodule update  
+cd Submodules/nimbus  
+git submodule init  
 git submodule update`  
 
 Requirement
