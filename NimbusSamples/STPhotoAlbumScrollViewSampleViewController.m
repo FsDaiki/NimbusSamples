@@ -56,6 +56,7 @@
     _photoAlbumScrollView = photoAlbumScrollView;
     _photoAlbumScrollView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
     _photoAlbumScrollView.dataSource = self;
+    _photoAlbumScrollView.delegate = self;
     [self.view addSubview:_photoAlbumScrollView];
     [_photoAlbumScrollView reloadData];
 }
@@ -105,6 +106,13 @@
     }
     
     return image;
+}
+
+#pragma mark - NIPhotoAlbumScrollViewDelegate
+
+- (void)pagingScrollViewDidChangePages:(NIPagingScrollView *)photoAlbumScrollView
+{
+    NSLog(@"centerPageIndex:%d", _photoAlbumScrollView.centerPageIndex);
 }
 
 @end
