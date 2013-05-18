@@ -8,10 +8,12 @@
 
 #import "STPhotoAlbumScrollViewSampleViewController.h"
 #import "STPhotoAlbumPhotoInfo.h"
+#import "AFNetworking.h"
 
 @implementation STPhotoAlbumScrollViewSampleViewController {
     __weak NIPhotoAlbumScrollView *_photoAlbumScrollView;
     __strong NSMutableArray *_photos;
+    __strong NSOperationQueue *_operationQueue;
 }
 
 - (id)init
@@ -40,6 +42,8 @@
         photoInfo.originalImageURL = [NSURL URLWithString:@"http://cdn-ak.f.st-hatena.com/images/fotolife/e/eimei23/20130518/20130518091607.jpg?1368836276"];
         photoInfo.originalImageSize = CGSizeMake(800, 600);
         [_photos addObject:photoInfo];
+        
+        _operationQueue = [[NSOperationQueue alloc] init];
     }
     return self;
 }
@@ -78,11 +82,22 @@
     
     *originalPhotoDimensions = photoInfo.originalImageSize;
     UIImage *image = nil;
-    if (photoInfo.originalImage == nil) {
+    if (photoInfo.originalImageState != STPhotoAlbumPhotoInfoOriginalImageStateLoaded) {
         *isLoading = YES;
         *photoSize = NIPhotoScrollViewPhotoSizeThumbnail;
         image = photoInfo.thumbnailImage;
-        // TODO: start loading originalImage.
+        
+        if (photoInfo.originalImageState == STPhotoAlbumPhotoInfoOriginalImageStateNone) {
+            photoInfo.originalImageState = STPhotoAlbumPhotoInfoOriginalImageStateLoading;
+
+            NSURLRequest *request = [NSURLRequest requestWithURL:photoInfo.originalImageURL];
+            AFImageRequestOperation *operation = [AFImageRequestOperation imageRequestOperationWithRequest:request success:^(UIImage *image) {
+                photoInfo.originalImage = image;
+                photoInfo.originalImageState = STPhotoAlbumPhotoInfoOriginalImageStateLoaded;
+                [_photoAlbumScrollView didLoadPhoto:image atIndex:photoIndex photoSize:NIPhotoScrollViewPhotoSizeOriginal];
+            }];
+            [_operationQueue addOperation:operation];
+        }
     } else {
         *isLoading = NO;
         *photoSize = NIPhotoScrollViewPhotoSizeOriginal;
