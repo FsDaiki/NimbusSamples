@@ -11,7 +11,8 @@
 #import "AFNetworking.h"
 
 @implementation STPhotoAlbumScrollViewSampleViewController {
-    __weak NIPhotoAlbumScrollView *_photoAlbumScrollView;
+    IBOutlet __weak NIPhotoAlbumScrollView *_photoAlbumScrollView;
+    IBOutlet __weak UIPageControl *_pageControl;
     __strong NSMutableArray *_photos;
     __strong NSOperationQueue *_operationQueue;
 }
@@ -52,13 +53,27 @@
 {
     [super viewDidLoad];
 
-    NIPhotoAlbumScrollView *photoAlbumScrollView = [[NIPhotoAlbumScrollView alloc] initWithFrame:self.view.bounds];
-    _photoAlbumScrollView = photoAlbumScrollView;
-    _photoAlbumScrollView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
+    self.view.backgroundColor = [UIColor blackColor];
+    
+    _photoAlbumScrollView.backgroundColor = [UIColor clearColor];
+    _photoAlbumScrollView.translatesAutoresizingMaskIntoConstraints = YES;
+    _photoAlbumScrollView.zoomingIsEnabled = YES;
     _photoAlbumScrollView.dataSource = self;
     _photoAlbumScrollView.delegate = self;
-    [self.view addSubview:_photoAlbumScrollView];
     [_photoAlbumScrollView reloadData];
+    
+    _pageControl.numberOfPages = _photos.count;
+    [_pageControl addTarget:self action:@selector(pageControlDidChangeValue) forControlEvents:UIControlEventValueChanged];
+}
+
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    [_photoAlbumScrollView willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
+}
+
+- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    [_photoAlbumScrollView willAnimateRotationToInterfaceOrientation:toInterfaceOrientation duration:duration];
 }
 
 #pragma mark - NIPhotoAlbumScrollViewDataSource
@@ -112,7 +127,18 @@
 
 - (void)pagingScrollViewDidChangePages:(NIPagingScrollView *)photoAlbumScrollView
 {
-    NSLog(@"centerPageIndex:%d", _photoAlbumScrollView.centerPageIndex);
+    if (_pageControl.currentPage != _photoAlbumScrollView.centerPageIndex) {
+        _pageControl.currentPage = _photoAlbumScrollView.centerPageIndex;
+    }
+}
+
+#pragma mark - UIPageControl events
+
+- (void)pageControlDidChangeValue
+{
+    if (_photoAlbumScrollView.centerPageIndex != _pageControl.currentPage) {
+        _photoAlbumScrollView.centerPageIndex = _pageControl.currentPage;
+    }
 }
 
 @end

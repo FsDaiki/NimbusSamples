@@ -76,6 +76,7 @@
 		B7EF737E1747087600FD69E3 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B7EF73731747087600FD69E3 /* AFURLConnectionOperation.m */; };
 		B7EF737F1747087600FD69E3 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B7EF73751747087600FD69E3 /* AFXMLRequestOperation.m */; };
 		B7EF73801747087600FD69E3 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = B7EF73771747087600FD69E3 /* UIImageView+AFNetworking.m */; };
+		B7EF73821747154200FD69E3 /* STPhotoAlbumScrollViewSampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7EF73811747154100FD69E3 /* STPhotoAlbumScrollViewSampleViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -219,6 +220,7 @@
 		B7EF73751747087600FD69E3 /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
 		B7EF73761747087600FD69E3 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
 		B7EF73771747087600FD69E3 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		B7EF73811747154100FD69E3 /* STPhotoAlbumScrollViewSampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STPhotoAlbumScrollViewSampleViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -475,6 +477,7 @@
 			children = (
 				B7EF735A1746F6C500FD69E3 /* STPhotoAlbumScrollViewSampleViewController.h */,
 				B7EF735B1746F6C500FD69E3 /* STPhotoAlbumScrollViewSampleViewController.m */,
+				B7EF73811747154100FD69E3 /* STPhotoAlbumScrollViewSampleViewController.xib */,
 				B7EF73601746FD7D00FD69E3 /* STPhotoAlbumPhotoInfo.h */,
 				B7EF73611746FD7D00FD69E3 /* STPhotoAlbumPhotoInfo.m */,
 			);
@@ -579,6 +582,7 @@
 				B70D9CD11741AA2B004039BB /* STAttributedLabelSample1ViewController.xib in Resources */,
 				B7EF72F41743101300FD69E3 /* STAttributedLabelSample2ViewController.xib in Resources */,
 				B7EF73581746F5D200FD69E3 /* NimbusPhotos.bundle in Resources */,
+				B7EF73821747154200FD69E3 /* STPhotoAlbumScrollViewSampleViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
