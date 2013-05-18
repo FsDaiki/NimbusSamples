@@ -66,6 +66,7 @@
 		B7EF73561746F5BE00FD69E3 /* NIToolbarPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7EF73521746F5BE00FD69E3 /* NIToolbarPhotoViewController.m */; };
 		B7EF73581746F5D200FD69E3 /* NimbusPhotos.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B7EF73571746F5D200FD69E3 /* NimbusPhotos.bundle */; };
 		B7EF735C1746F6C500FD69E3 /* STPhotoAlbumScrollViewSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7EF735B1746F6C500FD69E3 /* STPhotoAlbumScrollViewSampleViewController.m */; };
+		B7EF73621746FD7D00FD69E3 /* STPhotoAlbumPhotoInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B7EF73611746FD7D00FD69E3 /* STPhotoAlbumPhotoInfo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -188,6 +189,8 @@
 		B7EF73571746F5D200FD69E3 /* NimbusPhotos.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = NimbusPhotos.bundle; path = Submodules/nimbus/src/photos/resources/NimbusPhotos.bundle; sourceTree = "<group>"; };
 		B7EF735A1746F6C500FD69E3 /* STPhotoAlbumScrollViewSampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPhotoAlbumScrollViewSampleViewController.h; sourceTree = "<group>"; };
 		B7EF735B1746F6C500FD69E3 /* STPhotoAlbumScrollViewSampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPhotoAlbumScrollViewSampleViewController.m; sourceTree = "<group>"; };
+		B7EF73601746FD7D00FD69E3 /* STPhotoAlbumPhotoInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPhotoAlbumPhotoInfo.h; sourceTree = "<group>"; };
+		B7EF73611746FD7D00FD69E3 /* STPhotoAlbumPhotoInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPhotoAlbumPhotoInfo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -443,6 +446,8 @@
 			children = (
 				B7EF735A1746F6C500FD69E3 /* STPhotoAlbumScrollViewSampleViewController.h */,
 				B7EF735B1746F6C500FD69E3 /* STPhotoAlbumScrollViewSampleViewController.m */,
+				B7EF73601746FD7D00FD69E3 /* STPhotoAlbumPhotoInfo.h */,
+				B7EF73611746FD7D00FD69E3 /* STPhotoAlbumPhotoInfo.m */,
 			);
 			name = Photos;
 			sourceTree = "<group>";
@@ -562,6 +567,7 @@
 				B7EF73551746F5BE00FD69E3 /* NIPhotoScrubberView.m in Sources */,
 				B7EF73561746F5BE00FD69E3 /* NIToolbarPhotoViewController.m in Sources */,
 				B7EF735C1746F6C500FD69E3 /* STPhotoAlbumScrollViewSampleViewController.m in Sources */,
+				B7EF73621746FD7D00FD69E3 /* STPhotoAlbumPhotoInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

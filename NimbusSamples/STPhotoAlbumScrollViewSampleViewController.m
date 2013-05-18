@@ -7,9 +7,11 @@
 //
 
 #import "STPhotoAlbumScrollViewSampleViewController.h"
+#import "STPhotoAlbumPhotoInfo.h"
 
 @implementation STPhotoAlbumScrollViewSampleViewController {
     __weak NIPhotoAlbumScrollView *_photoAlbumScrollView;
+    __strong NSMutableArray *_photos;
 }
 
 - (id)init
@@ -17,6 +19,27 @@
     self = [super initWithNibName:nil bundle:nil];
     if (self) {
         self.title = @"Photo Album";
+        
+        _photos = [NSMutableArray arrayWithCapacity:3];
+        
+        STPhotoAlbumPhotoInfo *photoInfo;
+        photoInfo = [[STPhotoAlbumPhotoInfo alloc] init];
+        photoInfo.thumbnailImage = [UIImage imageNamed:@"castle01.jpg"];
+        photoInfo.originalImageURL = [NSURL URLWithString:@""];
+        photoInfo.originalImageSize = CGSizeMake(800, 600);
+        [_photos addObject:photoInfo];
+
+        photoInfo = [[STPhotoAlbumPhotoInfo alloc] init];
+        photoInfo.thumbnailImage = [UIImage imageNamed:@"castle02.jpg"];
+        photoInfo.originalImageURL = [NSURL URLWithString:@""];
+        photoInfo.originalImageSize = CGSizeMake(800, 600);
+        [_photos addObject:photoInfo];
+
+        photoInfo = [[STPhotoAlbumPhotoInfo alloc] init];
+        photoInfo.thumbnailImage = [UIImage imageNamed:@"castle03.jpg"];
+        photoInfo.originalImageURL = [NSURL URLWithString:@""];
+        photoInfo.originalImageSize = CGSizeMake(800, 600);
+        [_photos addObject:photoInfo];
     }
     return self;
 }
@@ -37,7 +60,7 @@
 
 - (NSInteger)numberOfPagesInPagingScrollView:(NIPagingScrollView *)photoAlbumScrollView
 {
-    return 3;
+    return _photos.count;
 }
 
 - (UIView<NIPagingScrollViewPage> *)pagingScrollView:(NIPagingScrollView *)photoAlbumScrollView pageViewForIndex:(NSInteger)pageIndex
@@ -51,12 +74,12 @@
                         isLoading:(BOOL *)isLoading
           originalPhotoDimensions:(CGSize *)originalPhotoDimensions
 {
-    UIImage *image = [UIImage imageNamed:@"castle01.jpg"];
+    STPhotoAlbumPhotoInfo *photoInfo = [_photos objectAtIndex:photoIndex];
     *isLoading = NO;
-    *originalPhotoDimensions = CGSizeMake(800, 600);
+    *originalPhotoDimensions = photoInfo.originalImageSize;
     *photoSize = NIPhotoScrollViewPhotoSizeThumbnail;
     
-    return image;
+    return photoInfo.thumbnailImage;
 }
 
 @end
