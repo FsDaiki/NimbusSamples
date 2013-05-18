@@ -25,19 +25,19 @@
         STPhotoAlbumPhotoInfo *photoInfo;
         photoInfo = [[STPhotoAlbumPhotoInfo alloc] init];
         photoInfo.thumbnailImage = [UIImage imageNamed:@"castle01.jpg"];
-        photoInfo.originalImageURL = [NSURL URLWithString:@""];
+        photoInfo.originalImageURL = [NSURL URLWithString:@"http://cdn-ak.f.st-hatena.com/images/fotolife/e/eimei23/20130518/20130518091536.jpg?1368836295"];
         photoInfo.originalImageSize = CGSizeMake(800, 600);
         [_photos addObject:photoInfo];
 
         photoInfo = [[STPhotoAlbumPhotoInfo alloc] init];
         photoInfo.thumbnailImage = [UIImage imageNamed:@"castle02.jpg"];
-        photoInfo.originalImageURL = [NSURL URLWithString:@""];
+        photoInfo.originalImageURL = [NSURL URLWithString:@"http://cdn-ak.f.st-hatena.com/images/fotolife/e/eimei23/20130518/20130518091632.jpg?1368836311"];
         photoInfo.originalImageSize = CGSizeMake(800, 600);
         [_photos addObject:photoInfo];
 
         photoInfo = [[STPhotoAlbumPhotoInfo alloc] init];
         photoInfo.thumbnailImage = [UIImage imageNamed:@"castle03.jpg"];
-        photoInfo.originalImageURL = [NSURL URLWithString:@""];
+        photoInfo.originalImageURL = [NSURL URLWithString:@"http://cdn-ak.f.st-hatena.com/images/fotolife/e/eimei23/20130518/20130518091607.jpg?1368836276"];
         photoInfo.originalImageSize = CGSizeMake(800, 600);
         [_photos addObject:photoInfo];
     }
@@ -75,11 +75,21 @@
           originalPhotoDimensions:(CGSize *)originalPhotoDimensions
 {
     STPhotoAlbumPhotoInfo *photoInfo = [_photos objectAtIndex:photoIndex];
-    *isLoading = NO;
-    *originalPhotoDimensions = photoInfo.originalImageSize;
-    *photoSize = NIPhotoScrollViewPhotoSizeThumbnail;
     
-    return photoInfo.thumbnailImage;
+    *originalPhotoDimensions = photoInfo.originalImageSize;
+    UIImage *image = nil;
+    if (photoInfo.originalImage == nil) {
+        *isLoading = YES;
+        *photoSize = NIPhotoScrollViewPhotoSizeThumbnail;
+        image = photoInfo.thumbnailImage;
+        // TODO: start loading originalImage.
+    } else {
+        *isLoading = NO;
+        *photoSize = NIPhotoScrollViewPhotoSizeOriginal;
+        image = photoInfo.originalImage;
+    }
+    
+    return image;
 }
 
 @end

@@ -13,5 +13,6 @@
 @property (strong, nonatomic) UIImage *thumbnailImage;
 @property (strong, nonatomic) NSURL *originalImageURL;
 @property (nonatomic) CGSize originalImageSize;
+@property (strong, nonatomic) UIImage *originalImage;
 
 @end
