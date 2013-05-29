@@ -82,6 +82,7 @@
         STPagingScrollViewImagePage *imagePage = nil;
         if (page == nil) {
             imagePage = [[STPagingScrollViewImagePage alloc] initWithFrame:pagingScrollView.bounds];
+            imagePage.reuseIdentifier = reusePageIdentifier;
             page = imagePage;
         } else {
             imagePage = (STPagingScrollViewImagePage *)page;
@@ -91,6 +92,7 @@
         STPagingScrollViewLabelPage *labelPage = nil;
         if (page == nil) {
             labelPage = [[STPagingScrollViewLabelPage alloc] initWithFrame:pagingScrollView.bounds];
+            labelPage.reuseIdentifier = reusePageIdentifier;
             page = labelPage;
         } else {
             labelPage = (STPagingScrollViewLabelPage *)page;

@@ -11,6 +11,7 @@
 
 @interface STPagingScrollViewImagePage : UIView<NIPagingScrollViewPage>
 
+@property (nonatomic, readwrite, copy) NSString* reuseIdentifier;
 @property (nonatomic, readwrite, assign) NSInteger pageIndex;
 @property (strong, nonatomic, readonly) UIImageView *imageView;
 
